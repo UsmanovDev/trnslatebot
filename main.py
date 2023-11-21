@@ -149,7 +149,6 @@ def start(update:Update,context:CallbackContext):
         btn1 = InlineKeyboardMarkup([[btn]])
         bot.send_message(chat_id, 'Admin sozlamalari ⚙️', reply_markup=btn1)
     db.starting(chat_id)
-    db.kunlikobuna(chat_id,True)
     name = update.message.chat.first_name
     bot.send_message(chat_id, f'👋*Salom {name},Men tarjimon botman!*\n\nMen sizga O’zbek va Ingliz tilida matnlarni tarjima qilishda yordam beraman.\n\n🔎Tarjima qilishingiz kerak bo’lgan matnni menga yuboring' ,parse_mode=ParseMode.MARKDOWN)
     channels = db.channels()
@@ -263,7 +262,6 @@ def admin_command(update:Update, context:CallbackContext):
             groups = db.groups()
             admins = db.alladmins()
             kanals = db.channels()
-            ob = db.kunlikobuna(1,False)
             text = f'*Bot statistikasi*\n\nAdminlar: {len(admins)}\nUserlar: {len(users)-len(groups)}\nBugun qo\'shilgan userlar: {ob}\nGuruhlar: {len(groups)}\nMajburiy kanallar: {len(kanals)}'
             bot.sendMessage(chat_id,text,parse_mode=ParseMode.MARKDOWN)
         elif command == 'sendfwd':
