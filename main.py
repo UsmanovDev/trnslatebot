@@ -262,7 +262,7 @@ def admin_command(update:Update, context:CallbackContext):
             groups = db.groups()
             admins = db.alladmins()
             kanals = db.channels()
-            text = f'*Bot statistikasi*\n\nAdminlar: {len(admins)}\nUserlar: {len(users)-len(groups)}\nBugun qo\'shilgan userlar: {ob}\nGuruhlar: {len(groups)}\nMajburiy kanallar: {len(kanals)}'
+            text = f'*Bot statistikasi*\n\nAdminlar: {len(admins)}\nUserlar: {len(users)-len(groups)}\nGuruhlar: {len(groups)}\nMajburiy kanallar: {len(kanals)}'
             bot.sendMessage(chat_id,text,parse_mode=ParseMode.MARKDOWN)
         elif command == 'sendfwd':
             bot.sendMessage(chat_id,"*Forward message* yuborish uchun avval yubormoqchi bo'lgan xabaringizni botga yuboring va shu habarni reply qilib *send* xabarini jo'nating",parse_mode=ParseMode.MARKDOWN)
