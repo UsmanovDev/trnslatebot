@@ -311,7 +311,7 @@ def forwarding(update:Update, context:CallbackContext):
         pass
 
 
-updater=Updater('5873498271:AAGbWIyvaojE9RZ7HafEVDn2zfU8CVEJ_IY')
+updater=Updater('5514911055:AAEefIWJJbe6MkIfbX6BES47hmMEQpMym88')
 
 updater.dispatcher.add_handler(CommandHandler('start',start))
 updater.dispatcher.add_handler(CommandHandler('uzen',uzen))
